@@ -6,7 +6,7 @@ interface IContainer {
 }
 
 function Container({ children }: IContainer) {
-  return <div className="w-5xl m-auto">
+  return <div className="xl:w-5xl max-xl:container max-sm:px-5 m-auto">
     {children}
   </div>;
 }

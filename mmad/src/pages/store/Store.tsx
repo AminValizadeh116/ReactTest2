@@ -19,7 +19,7 @@ function Store() {
   return (
     <Container>
       {!isLoading ? (
-        <div className="grid grid-cols-4 gap-5 ">
+        <div className="grid max-md:grid-cols-2 max-xl:grid-cols-3 grid-cols-4 gap-5 ">
           {productsList.map((item) => (
             <SingleShoppingCart {...item} />
           ))}

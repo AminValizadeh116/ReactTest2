@@ -9,10 +9,10 @@ function Header() {
 
   return (
     <div className={styled.header}>
-      <div className="bg-neutral-700 opacity-80 py-5 mb-10 rounded-b-lg">
+      <div className="bg-neutral-700 opacity-80 py-5 max-md:py-2 mb-10 rounded-b-lg">
         <Container>
-          <div className="flex items-center justify-between ">
-            <ul className="text-white flex gap-8 text-xl font-bold">
+          <div className="flex items-center justify-between max-md:justify-around">
+            <ul className="text-white flex gap-8 max-md:text-base text-xl font-bold">
               <li>
                 <Link to="/ReactTest2">home</Link>
               </li>

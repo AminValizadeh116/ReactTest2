@@ -19,14 +19,14 @@ function Comments() {
   return (
     <div>
       <div className='my-30'>
-        <h2 className="flex items-center justify-center text-4xl">
+        <h2 className="flex items-center justify-center md:text-4xl text-xl">
           What our costomers say?
         </h2>
       </div>
       <div className='grid grid-cols-3 gap-10'>
-        {comments.map(i => <div key={i.id} className="bg-neutral-200 border border-neutral-300 shadow col-span-1 mb-10 rounded-2xl flex items-center justify-center flex-col">
-            <img src={i.profile} alt="profile" className='w-30 h-30 rounded-full -mt-15'/>
-            <p className='p-10'>{i.comment}</p>
+        {comments.map(i => <div key={i.id} className="bg-neutral-200 border border-neutral-300 shadow col-span-1 mb-10 rounded-2xl flex items-center flex-col">
+            <img src={i.profile} alt="profile" className='w-30 h-30 rounded-full -mt-15 max-md:h-18 max-md:w-18 max-md:-mt-10'/>
+            <p className='p-10 max-md:p-3 max-md:text-xs'>{i.comment}</p>
         </div>)}
       </div>
     </div>

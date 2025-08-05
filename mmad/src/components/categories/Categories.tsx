@@ -24,7 +24,7 @@ function Categories() {
 
   return (
     <div className="mt-15">
-      <ul className="grid grid-cols-4 gap-5">
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {allCategories.map((item) => (
           <Button
             variant="dark"
@@ -39,7 +39,7 @@ function Categories() {
         ))}
       </ul>
       {data.length !== 0 ? (
-        <div className="grid grid-cols-4 gap-5 pt-15">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 pt-15">
           {categirizedData.map((item) => (
             <SingleShoppingCart key={item.id} {...item} />
           ))}
