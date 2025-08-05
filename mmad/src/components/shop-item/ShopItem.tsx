@@ -5,41 +5,60 @@ import { userShopingCartContext } from "../../context/shopingCartContext";
 import type { IProducts } from "../../types/services";
 import Button from "../button/Button";
 
-interface IShopItem{
-  id: number
-  Qty: number
+interface IShopItem {
+  id: number;
+  Qty: number;
 }
 
-function ShopItem({id, Qty}:IShopItem) {
-  const {handleDecreaseProductQty, handleIncreaseProductQty, handleRemoveProduct} = userShopingCartContext()
-  const [product, setProduct] = useState<IProducts>()
+function ShopItem({ id, Qty }: IShopItem) {
+  const {
+    handleDecreaseProductQty,
+    handleIncreaseProductQty,
+    handleRemoveProduct,
+  } = userShopingCartContext();
+  const [product, setProduct] = useState<IProducts>();
   useEffect(() => {
-    getProduct(id as number).then(result => setProduct(result))
-  }, [])
+    getProduct(id as number).then((result) => setProduct(result));
+  }, []);
 
   return (
     <>
       <Container>
-          <div className="flex pb-3">
-            <div className="h-40 mr-20">
-          <img
-            className="w-25"
-            src={product?.image}
-            alt=""
-          /></div>
-          <div className="flex flex-col justify-around">
+        <div className="flex pb-5">
+          <div className="mr-20">
+            <img className="w-40" src={product?.image} alt="" />
+          </div>
+          <div className="max-sm:text-xs max-md:text-sm">
             <h2>{product?.title}</h2>
-            <div className="flex items-center gap-3">
-              <Button onClick={() => handleIncreaseProductQty(id)} variant="warning" className="w-13 h-8"> + </Button>
+            <div className="flex items-center gap-3 mt-10 mb-3 max-sm:mt-4 max-sm:mb-1">
+              <Button
+                onClick={() => handleIncreaseProductQty(id)}
+                variant="warning"
+                className="max-sm:w-10 max-sm:h-6 sm:w-13 sm:h-8"
+              >
+                +
+              </Button>
               <span>{Qty}</span>
-              <Button onClick={() => handleDecreaseProductQty(id)} variant="warning" className="w-13 h-8"> - </Button>
+              <Button
+                onClick={() => handleDecreaseProductQty(id)}
+                variant="warning"
+                className="max-sm:w-10 max-sm:h-6 sm:w-13 sm:h-8"
+              >
+                -
+              </Button>
             </div>
             <div>
-              <Button onClick={() => handleRemoveProduct(id)} variant="danger" className="w-35 h-8"> remove </Button>
+              <Button
+                onClick={() => handleRemoveProduct(id)}
+                variant="danger"
+                className="max-sm:w-27 max-sm:h-6 sm:w-35 sm:h-8"
+              >
+                remove
+              </Button>
             </div>
           </div>
         </div>
-        <hr className="text-neutral-300"/> 
+        <hr className="text-neutral-300" />
       </Container>
     </>
   );
