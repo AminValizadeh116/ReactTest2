@@ -17,9 +17,6 @@ function Header() {
                 <Link to="/ReactTest2">home</Link>
               </li>
               <li>
-                <Link to="/ReactTest2/shop"> shop</Link>
-              </li>
-              <li>
                 <Link to="/ReactTest2/store"> store</Link>
               </li>
             </ul>
