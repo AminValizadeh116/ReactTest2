@@ -23,7 +23,7 @@ function Comments() {
           What our costomers say?
         </h2>
       </div>
-      <div className='grid grid-cols-3 gap-10'>
+      <div className='grid grid-cols-3 gap-10 max-sm:grid-cols-2'>
         {comments.map(i => <div key={i.id} className="bg-neutral-200 border border-neutral-300 shadow col-span-1 mb-10 rounded-2xl flex items-center flex-col">
             <img src={i.profile} alt="profile" className='w-30 h-30 rounded-full -mt-15 max-md:h-18 max-md:w-18 max-md:-mt-10'/>
             <p className='p-10 max-md:p-3 max-md:text-xs'>{i.comment}</p>

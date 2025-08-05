@@ -24,7 +24,7 @@ function Categories() {
 
   return (
     <div className="mt-15">
-      <ul className="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <ul className="grid grid-cols-4 gap-5">
         {allCategories.map((item) => (
           <Button
             variant="dark"
@@ -32,7 +32,7 @@ function Categories() {
               setStatus(item);
             }}
           >
-            <li key={item} className="py-3">
+            <li key={item} className="py-3 max-sm:text-xs max-sm:py-1">
               {item}
             </li>
           </Button>
