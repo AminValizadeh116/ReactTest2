@@ -24,11 +24,11 @@ function ShopItem({ id, Qty }: IShopItem) {
   return (
     <>
       <Container>
-        <div className="flex pb-5">
-          <div className="mr-20">
+        <div className="grid grid-cols-3 gap-5 pb-5">
+          <div className="col-span-1">
             <img className="w-40" src={product?.image} alt="" />
           </div>
-          <div className="max-sm:text-xs max-md:text-sm">
+          <div className="max-sm:text-xs max-md:text-sm col-span-2">
             <h2>{product?.title}</h2>
             <div className="flex items-center gap-3 mt-10 mb-3 max-sm:mt-4 max-sm:mb-1">
               <Button
