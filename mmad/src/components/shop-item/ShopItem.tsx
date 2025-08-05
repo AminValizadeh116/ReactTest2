@@ -26,7 +26,7 @@ function ShopItem({ id, Qty }: IShopItem) {
       <Container>
         <div className="grid grid-cols-3 gap-5 pb-5">
           <div className="col-span-1">
-            <img className="w-40" src={product?.image} alt="" />
+            <img className="max-sm:max-h-30" src={product?.image} alt="" />
           </div>
           <div className="max-sm:text-xs max-md:text-sm col-span-2">
             <h2>{product?.title}</h2>
